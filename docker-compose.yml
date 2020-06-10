@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    env_file:
+     - mysql.env
+    expose:
+      - '3306'
+    container_name: mysql.okts-dev
+
+  spring3hibernate.okts.tk:
+    image: javaapp:02
+    ports:
+      - '9090:8080'
+    restart: always
+    links:
+      - mysql
+    container_name: spring3-hibernate
+    env_file:
+     - java.env
