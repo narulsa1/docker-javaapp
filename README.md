@@ -17,7 +17,7 @@ docker pull mysql:5.7
 
 # Clone this repo and run docker-compose:
 
-Now clone this repo run and the below command:
+Now clone this repo and run the below command:
 
 docker-compose up -d
 
