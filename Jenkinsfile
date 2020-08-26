@@ -17,7 +17,7 @@ pipeline {
                  }
               }
 
-              stage('Docker Hub Push'){
+              stage('Docker Compose Run'){
                  steps{
                     sh "docker-compose up -d"      
                  }
